@@ -621,13 +621,16 @@ body {
   line-height: 150%;
   font-style: normal;
   font-weight: normal;
+  background-color: #ffffff;
+  color: #102654;
 }
 
 .container {
   width: 100%;
   max-width: 1250px;
   margin: 0 auto;
-  padding: 0 45px;
+  padding-left: 45px;
+  padding-right: 45px;
 }
 
 .logo svg {
@@ -733,6 +736,23 @@ body {
   max-width: 234px;
 }
 
+.section {
+  padding-top: 120px;
+  padding-bottom: 120px;
+}
+
+.section-heading {
+  font-family: "Bebas Neue", "Arial", sans-serif;
+  font-size: 49px;
+  line-height: 49px;
+  letter-spacing: 0.03em;
+  color: #102654;
+  text-transform: uppercase;
+  padding: 0;
+  margin: 0;
+  margin-bottom: 9px;
+}
+
 .page-header {
   position: absolute;
   left: 0;
@@ -819,6 +839,48 @@ body {
   color: #ffffff;
 }
 
+.gym {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  padding-bottom: 235px;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 150%;
+}
+
+.gym__column {
+  padding: 47px 85px 0 60px;
+}
+
+.gym__content {
+  padding: 22px 0;
+}
+
+.gym img {
+  width: 660px;
+  height: 401px;
+}
+
+.gym video {
+  position: absolute;
+  bottom: 120px;
+  left: 78px;
+  right: 0;
+  margin: 0 auto;
+}
+
+.gym p {
+  padding: 0;
+  margin: 9px 0;
+}
+
+.gym b {
+  font-weight: 400;
+  font-size: 18px;
+}
+
 /* @media (hover: hover), screen and (min-width: 0\0) {
   &:hover,
   &:focus {
@@ -868,6 +930,16 @@ body {
     max-width: 187px;
   }
 
+  .section {
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+
+  .section-heading {
+    font-size: 42px;
+    line-height: 42px;
+  }
+
   .page-header {
     padding-top: 37px;
   }
@@ -912,11 +984,50 @@ body {
   .intro__social {
     display: none;
   }
+
+  .gym {
+    display: block;
+    padding-bottom: 165px;
+    text-align: center;
+  }
+
+  .gym__column {
+    padding: 0 85px;
+  }
+
+  .gym__content {
+    padding: 17px 0;
+  }
+
+  .gym img {
+    width: 100%;
+    height: 345px;
+    margin: 17px 0;
+    -o-object-fit: cover;
+    object-fit: cover;
+  }
+
+  .gym video {
+    bottom: 100px;
+    width: 266px;
+    height: 167px;
+    left: 0;
+  }
+
+  .gym__content p:not(:first-child) {
+    display: none;
+  }
 }
 
 @media (max-width: 767px) {
   .container {
-    padding: 0 15px;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .container--mobile-not-padding {
+    padding-left: 0;
+    padding-right: 0;
   }
 
   .logo svg {
@@ -945,6 +1056,17 @@ body {
     max-width: none;
   }
 
+  .section {
+    padding-top: 70px;
+    padding-bottom: 70px;
+  }
+
+  .section-heading {
+    font-size: 32px;
+    line-height: 32px;
+    margin-bottom: 7px;
+  }
+
   .page-header {
     padding-top: 15px;
   }
@@ -970,5 +1092,35 @@ body {
 
   .intro__right-column {
     display: none;
+  }
+
+  .gym {
+    text-align: left;
+    padding-bottom: 30px;
+  }
+
+  .gym__column {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .gym__content {
+    padding: 11px 30px 11px 0;
+  }
+
+  .gym img {
+    margin: 15px 0;
+    height: 313px;
+  }
+
+  .gym video {
+    position: static;
+    width: 100%;
+    height: 167px;
+    margin: 40px 0;
+  }
+
+  .gym p {
+    margin: 7px 0;
   }
 }
