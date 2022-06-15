@@ -1,0 +1,103 @@
+.intro {
+  min-height: 658px;
+  background: $conic-gradient-desk;
+  color: $color-default-white;
+  padding-top: 51px;
+  padding-bottom: 51px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+  @include vp-1199 {
+    padding-top: 82px;
+    box-shadow: none;
+    min-height: 554px;
+  }
+
+  @include vp-767 {
+    padding-top: 78px;
+    min-height: 490px;
+  }
+}
+
+.intro__flex {
+  display: flex;
+  position: relative;
+
+  @include vp-1199 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  @include vp-767 {
+    display: block;
+  }
+}
+
+.intro__left-column {
+  flex-grow: 1;
+  max-width: 460px;
+  text-align: right;
+  padding-top: 64px;
+  padding-right: 64px;
+
+  @include vp-1199 {
+    max-width: none;
+    padding-top: 19px;
+    padding-right: 15px;
+  }
+
+  @include vp-767 {
+    padding: 0;
+  }
+}
+
+.intro__right-column {
+  img {
+    display: block;
+    width: 500px;
+    height: 556px;
+  }
+
+  @include vp-1199 {
+    padding-left: 15px;
+
+    img {
+      width: 100%;
+      height: 390px;
+      object-fit: cover;
+    }
+  }
+
+  @include vp-767 {
+    display: none;
+  }
+}
+
+.intro__social {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  position: absolute;
+  right: 45px;
+  bottom: 39px;
+  text-align: right;
+
+  li {
+    margin-bottom: 8px;
+  }
+
+  li:last-child {
+    margin-bottom: 0;
+  }
+
+  a {
+    font-size: 12px;
+    line-height: 14px;
+    text-align: right;
+    text-transform: uppercase;
+    color: $color-default-white;
+  }
+
+  @include vp-1199 {
+    display: none;
+  }
+}
