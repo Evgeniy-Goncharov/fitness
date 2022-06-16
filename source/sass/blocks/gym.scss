@@ -60,12 +60,17 @@
   }
 }
 
-.gym iframe {
+.gym__video {
   position: absolute;
   bottom: 120px;
   left: 78px;
   right: 0;
   margin: 0 auto;
+
+  img {
+    width: 10px;
+    height: 10px;
+  }
 
   @include vp-1199 {
     bottom: 100px;
@@ -78,7 +83,7 @@
     position: static;
     width: 100%;
     height: 167px;
-    margin: 40px 0;
+    margin: 25px 0;
   }
 }
 
