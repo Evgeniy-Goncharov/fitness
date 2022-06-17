@@ -1,0 +1,242 @@
+.abonements {
+  background: $color-white-for-background;
+  text-align: center;
+  position: relative;
+  padding-top: 117px;
+
+  @include vp-767 {
+    padding-top: 69px;
+  }
+}
+
+.abonements__thumbs {
+  width: 341px;
+  margin-bottom: 38px;
+
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    padding-top: 26px;
+    padding-bottom: 11px;
+    border-bottom: 2px solid $color-for-border;
+  }
+
+  li {
+    font-size: 20px;
+    line-height: 150%;
+    color: rgba(16, 38, 84, 0.5);
+    width: auto;
+  }
+
+  li.is-active {
+    color: $color-black-for-text;
+    position: relative;
+
+    &:before {
+      content: "";
+      position: absolute;
+      height: 2px;
+      left: 0;
+      right: 0;
+      bottom: -13px;
+      background-color: $color-orange;
+      z-index: 10;
+    }
+  }
+
+  @include vp-1199 {
+    width: 332px;
+    margin-bottom: 44px;
+
+    ul {
+      padding-top: 21px;
+    }
+
+    li {
+      font-size: 18px;
+    }
+  }
+
+  @include vp-767 {
+    width: 290px;
+    margin-bottom: 34px;
+
+    ul {
+      padding-top: 15px;
+      padding-bottom: 12px;
+    }
+
+    li {
+      font-size: 16px;
+      padding: 0 7px;
+    }
+
+    li:first-child {
+      padding: 0 7px 0 0;
+    }
+
+    li:last-child {
+      padding: 0 0 0 7px;
+    }
+
+    li.is-active {
+      &::before {
+        bottom: -14px;
+      }
+    }
+  }
+}
+
+.abonements__slider {
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  @include vp-1199 {
+    width: 442px;
+  }
+
+  @include vp-767 {
+    width: 100%;
+  }
+}
+
+.abonements__item {
+  >ul {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+  }
+
+  @include vp-1199 {
+    >ul {
+      display: block;
+    }
+  }
+}
+
+.abonements__card {
+  background-color: $color-default-white;
+  position: relative;
+  padding: 7px;
+
+  &:hover {
+    background: $gradient-for-card;
+
+    .abonements__card-button {
+      border: none;
+      background: $gradient-for-card;
+      color: $color-default-white;
+    }
+  }
+
+  h3 {
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 29px;
+    padding: 0;
+    margin: 10px 0;
+  }
+
+  p {
+    font-size: 16px;
+    line-height: 150%;
+    color: $color-light-for-text;
+    margin: 10px 0;
+    padding: 0;
+  }
+
+  @include vp-1199 {
+    margin-bottom: 40px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  @include vp-767 {
+    margin-bottom: 36px;
+
+    h3 {
+      font-size: 22px;
+      line-height: 24px;
+    }
+  }
+}
+
+.abonements__card-wrapper {
+  position: relative;
+  background-color: $color-default-white;
+  padding: 46px 20px 50px;
+
+  @include vp-767 {
+    padding-top: 34px;
+    padding-bottom: 36px;
+  }
+}
+
+.abonements__price {
+  position: relative;
+  margin: 10px 0 19px;
+
+  span:first-child {
+    font-weight: 700;
+    font-size: 100px;
+    line-height: 150%;
+    color: $color-grey;
+  }
+
+  span:last-child {
+    font-weight: 700;
+    font-size: 60px;
+    line-height: 150%;
+    color: $color-blue;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 5px;
+  }
+
+  svg {
+    width: 30px;
+    height: 42px;
+  }
+
+  @include vp-767 {
+    margin-bottom: 15px;
+
+    span:first-child {
+      font-size: 80px;
+    }
+
+    span:last-child {
+      font-size: 48px;
+    }
+
+    svg {
+      width: 24px;
+      height: 33px;
+    }
+  }
+}
+
+.abonements__image {
+  position: absolute;
+  right: 0;
+  bottom: -149px;
+  width: 287px;
+  height: 494px;
+
+  @include vp-1199 {
+    width: 347px;
+    height: 444px;
+    bottom: -125px;
+  }
+
+  @include vp-767 {
+    display: none;
+  }
+}

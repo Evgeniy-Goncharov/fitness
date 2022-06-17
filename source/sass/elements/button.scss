@@ -19,11 +19,28 @@
   justify-content: center;
   transition: all $trans-default;
 
+  &--w-206 {
+    max-width: 206px;
+  }
+
   &--w-230 {
     max-width: 234px;
   }
 
-  @media (hover: hover), screen and (min-width: 0\0) {
+  &--h-67 {
+    min-height: 71px;
+  }
+
+  &--black {
+    color: $color-black-for-text;
+    border-color: $color-black-for-text;
+    min-height: 66px;
+    border-width: 2px;
+  }
+
+  @media (hover: hover),
+  screen and (min-width: 0\0) {
+
     &:hover,
     &:focus {
       background-color: $color-default-white;
@@ -34,6 +51,13 @@
   @include vp-1199 {
     &--w-230 {
       max-width: 187px;
+    }
+
+    &--tablet-h-39 {
+      min-height: 41px;
+      border-width: 2px;
+      font-size: 10px;
+      line-height: 12px;
     }
   }
 
