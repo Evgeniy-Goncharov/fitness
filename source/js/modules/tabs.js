@@ -1,5 +1,3 @@
-// import swiper from "../vendor/swiper";
-
 function initTabs() {
   const sliderElement = document.querySelector('[data-slider=abonements]');
   const thumbsElement = document.querySelector('[data-slider=abonements-thumbs]');
