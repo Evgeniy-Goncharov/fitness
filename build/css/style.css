@@ -2177,6 +2177,120 @@ body {
   background: url("../../img/svg/next.svg") no-repeat center;
 }
 
+.features {
+  background-color: #F8F9FC;
+  text-align: center;
+  padding-bottom: 35px;
+}
+
+.features__grid {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 240px 1fr;
+  grid-template-columns: 1fr 240px 1fr;
+  -webkit-column-gap: 59px;
+  -moz-column-gap: 59px;
+  column-gap: 59px;
+  row-gap: 70px;
+  padding: 50px 60px 0;
+}
+
+.features__center {
+  margin-top: 10px;
+  background-color: #1C3374;
+  color: #ffffff;
+  padding: 40px 25px 49px;
+  height: -webkit-min-content;
+  height: -moz-min-content;
+  height: min-content;
+  -ms-grid-column: 2;
+  grid-column-start: 2;
+  -ms-grid-column-span: 1;
+  grid-column-end: 3;
+  -ms-grid-row: 1;
+  grid-row-start: 1;
+  -ms-grid-row-span: 2;
+  grid-row-end: 3;
+}
+
+.features__center h3 {
+  font-weight: 700;
+  font-size: 74px;
+  line-height: 110%;
+  padding: 0;
+  margin: 10px 0 31px;
+}
+
+.features__center small {
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 150%;
+  display: block;
+}
+
+.features__center p {
+  padding: 0;
+  margin: 10px 0;
+}
+
+.features__card {
+  text-align: left;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-bottom: 20px;
+  padding-left: 2px;
+  min-height: 166px;
+}
+
+.features__card--border-bottom {
+  border-bottom: 2px solid rgba(209, 10, 66, 0.2);
+}
+
+.features__card--padding-left {
+  padding-left: 27px;
+}
+
+.features__card div:first-child {
+  margin-right: 30px;
+}
+
+.features__card h3 {
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 150%;
+  margin: 4px 0 7px;
+  padding: 0;
+}
+
+.features__card p {
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 140%;
+  padding: 0;
+  margin: 7px 0;
+}
+
+.features__card span {
+  font-weight: 700;
+  font-size: 71px;
+  line-height: 71px;
+  display: block;
+  background: -o-linear-gradient(307.49deg, #D10A42 0%, #0041CA 87.33%);
+  background: linear-gradient(142.51deg, #D10A42 0%, #0041CA 87.33%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-fill-color: transparent;
+}
+
+.features__card small {
+  display: block;
+  font-size: 14px;
+  line-height: 120%;
+  color: #2E35AC;
+}
+
 /* @media (hover: hover), screen and (min-width: 0\0) {
   &:hover,
   &:focus {
@@ -2433,6 +2547,123 @@ body {
   .coaches__navigation--next {
     right: -5px;
   }
+
+  .features {
+    padding-bottom: 90px;
+  }
+
+  .features__grid {
+    padding: 33px 0 0;
+    -ms-grid-columns: none;
+    grid-template-columns: none;
+    -ms-grid-rows: auto 40px auto 40px auto;
+    grid-template-areas: "b1 b2" "c c" "b3 b4";
+    -webkit-column-gap: 52px;
+    -moz-column-gap: 52px;
+    column-gap: 52px;
+    row-gap: 40px;
+  }
+
+  .features__left-column,
+  .features__right-column {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+  }
+
+  .features__center {
+    min-width: 442px;
+    width: 442px;
+    margin: 0 auto;
+    grid-area: c;
+    padding: 19px 25px 38px;
+    grid-area: c;
+  }
+
+  .features__center h3 {
+    margin-bottom: 16px;
+  }
+
+  .features__center small {
+    font-size: 22px;
+    line-height: 120%;
+  }
+
+  .features__center p {
+    max-width: 190px;
+    margin: 0 auto;
+  }
+
+  .features__card {
+    padding-left: 0;
+    padding-bottom: 0;
+    border: none;
+    min-height: auto;
+  }
+
+  .features__card--1 {
+    grid-area: b1;
+  }
+
+  .features__card--2 {
+    grid-area: b2;
+  }
+
+  .features__card--3 {
+    grid-area: b3;
+  }
+
+  .features__card--4 {
+    grid-area: b4;
+  }
+
+  .features__card h3 {
+    font-size: 20px;
+    margin: 0 0 3px;
+  }
+
+  .features__card span {
+    font-size: 58px;
+    line-height: 58px;
+  }
+
+  .features__card p {
+    margin: 3px 0;
+  }
+
+  .features__center {
+    -ms-grid-row: 3;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 3;
+  }
+
+  .features__center {
+    -ms-grid-row: 3;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 3;
+  }
+
+  .features__card--1 {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+  }
+
+  .features__card--2 {
+    -ms-grid-row: 1;
+    -ms-grid-column: 3;
+  }
+
+  .features__card--3 {
+    -ms-grid-row: 5;
+    -ms-grid-column: 1;
+  }
+
+  .features__card--4 {
+    -ms-grid-row: 5;
+    -ms-grid-column: 3;
+  }
 }
 
 @media (max-width: 767px) {
@@ -2656,5 +2887,56 @@ body {
 
   .coaches__navigation--next::after {
     background-image: url("../../img/svg/next--mobile.svg");
+  }
+
+  .features {
+    padding-bottom: 57px;
+  }
+
+  .features__grid {
+    display: block;
+    padding-top: 36px;
+  }
+
+  .features__left-column,
+  .features__right-column {
+    display: block;
+  }
+
+  .features__center {
+    max-width: none;
+    min-width: auto;
+    width: 100%;
+    margin-top: 43px;
+    margin-bottom: 43px;
+    padding: 27px 25px 42px;
+  }
+
+  .features__center h3 {
+    line-height: 100%;
+    margin-bottom: 10px;
+  }
+
+  .features__card {
+    display: block;
+    text-align: center;
+    margin-bottom: 32px;
+  }
+
+  .features__card:last-child {
+    margin-bottom: 0;
+  }
+
+  .features__card div:first-child {
+    margin-right: 0;
+  }
+
+  .features__card h3 {
+    margin: 7px 0 3px;
+  }
+
+  .features__card p {
+    max-width: 227px;
+    margin: 3px auto;
   }
 }

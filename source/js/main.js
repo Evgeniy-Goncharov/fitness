@@ -2,6 +2,7 @@ import {iosVhFix} from './utils/ios-vh-fix';
 import {initModals} from './modules/modals/init-modals';
 import {initTabs} from './modules/tabs';
 import {initCoaches} from './modules/coaches';
+import {initScroll} from './modules/scroll';
 
 // ---------------------------------
 
@@ -21,6 +22,7 @@ window.addEventListener('DOMContentLoaded', () => {
     initModals();
     initTabs();
     initCoaches();
+    initScroll();
   });
 });
 
