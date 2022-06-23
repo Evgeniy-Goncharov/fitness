@@ -1,0 +1,72 @@
+.contacts {
+
+}
+
+.contacts__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 115px;
+  position: relative;
+  padding-top: 32px;
+  padding-left: 5px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 38px;
+    bottom: 8px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    width: 1px;
+    background-color: $color-for-border;
+  }
+
+  dl,
+  dt,
+  dd {
+    margin: 0;
+    padding: 0;
+  }
+
+  dt {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 150%;
+    margin-bottom: 3px;
+  }
+
+  dd {
+    font-size: 14px;
+    line-height: 21px;
+    margin-bottom: 18px;
+  }
+
+  dd:last-child {
+    margin-bottom: 0;
+  }
+
+  @include vp-1199 {
+    padding-top: 23px;
+    padding-left: 0;
+    gap: 95px;
+
+    dt {
+      font-size: 20px;
+      margin-bottom: 9px;
+    }
+
+    dd {
+      font-size: 18px;
+      margin-bottom: 22px;
+    }
+  }
+
+  @include vp-767 {
+    display: block;
+
+    &::before {
+      display: none;
+    }
+  }
+}

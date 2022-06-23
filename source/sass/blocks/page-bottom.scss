@@ -1,0 +1,49 @@
+.page-bottom {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  @include vp-1199 {
+    display: block;
+  }
+}
+
+.page-bottom__left-column {
+  background-color: $color-black-for-text;
+
+  > * {
+    max-width: 620px;
+    padding: 68px 170px 70px 40px;
+    margin-left: auto;
+  }
+
+  @include vp-1199 {
+    > * {
+      max-width: none;
+      padding: 70px 133px 69px;
+    }
+  }
+
+  @include vp-767 {
+    > * {
+      padding: 70px 15px;
+    }
+  }
+}
+
+.page-bottom__right-column {
+  > * {
+    padding: 69px 95px 69px 120px;
+  }
+
+  @include vp-1199 {
+    > * {
+      padding: 68px 102px 67px 133px;
+    }
+  }
+
+  @include vp-767 {
+    > * {
+      padding: 70px 15px;
+    }
+  }
+}

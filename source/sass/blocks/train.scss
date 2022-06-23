@@ -1,0 +1,51 @@
+.train {
+
+}
+
+.train__form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 30px;
+  row-gap: 27px;
+  padding-top: 30px;
+
+  label {
+    margin: 0;
+    padding: 0;
+  }
+
+  input {
+    margin: 0;
+    padding: 0;
+    display: block;
+    width: 100%;
+    min-height: 30px;
+    border: none;
+    border-bottom: 1px solid $color-for-border;
+    background-color: transparent;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16px;
+    color: $color-default-white;
+  }
+
+  input::placeholder {
+    color: $color-default-white;
+  }
+
+  @include vp-1199 {
+    padding-top: 23px;
+    padding-right: 30px;
+    column-gap: 60px;
+  }
+
+  @include vp-767 {
+    display: block;
+  }
+}
+
+.train__submit-button {
+  grid-column-start: 1;
+  grid-column-end: -1;
+  margin: 0;
+}

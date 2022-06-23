@@ -1,0 +1,172 @@
+.reviews {
+  text-align: center;
+  padding-top: 58px;
+  padding-bottom: 77px;
+
+  @include vp-1199 {
+    padding-top: 49px;
+    padding-bottom: 69px;
+  }
+
+  @include vp-767 {
+    padding-top: 34px;
+    padding-bottom: 34px;
+  }
+}
+
+.reviews__slider-wrapper {
+  position: relative;
+  padding: 43px 60px;
+  max-width: 680px;
+  margin: 0 auto;
+
+  @include vp-1199 {
+    max-width: none;
+    padding: 31px 56px;
+  }
+
+  @include vp-767 {
+    padding: 36px 32px;
+  }
+}
+
+.reviews__slider {
+  box-shadow: $shadow-for-card;
+}
+
+.reviews__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+}
+
+.reviews__item {
+  display: flex;
+  align-items: flex-start;
+  background-color: $color-dark-blue;
+  padding: 44px 62px 46px;
+  color: $color-default-white;
+  text-align: left;
+
+  h3 {
+    font-size: 20px;
+    line-height: 150%;
+    margin: 10px 0 13px;
+  }
+
+  p {
+    margin: 9px 0;
+    line-height: 140%;
+  }
+
+  @include vp-1199 {
+    padding: 44px 65px 46px;
+  }
+
+  @include vp-767 {
+    display: block;
+    padding: 40px 25px 23px;
+
+    h3 {
+      display: none;
+    }
+
+    p {
+      text-align: center;
+      margin: 3px 0 10px;
+    }
+  }
+}
+
+.reviews__item-header {
+  min-width: 80px;
+  margin-top: 18px;
+  margin-right: 28px;
+
+  img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+  }
+
+  h3 {
+    display: none;
+  }
+
+  @include vp-767 {
+    margin: 0 0 15px;
+    display: flex;
+
+    img {
+      margin: 0 15px;
+      width: 68px;
+      height: 68px;
+    }
+
+    h3 {
+      margin: 0;
+      padding: 8px 0 0;
+      display: block;
+      font-size: 20px;
+      line-height: 130%;
+    }
+  }
+}
+
+.reviews__navigation {
+  &::after {
+    content: "";
+    width: 16px;
+    height: 32px;
+  }
+
+  &--prev {
+    left: 0;
+  }
+
+  &--next {
+    right: 0;
+  }
+
+  &--prev::after {
+    background: url("../../img/svg/prev.svg") no-repeat center;
+  }
+
+  &--next::after {
+    background: url("../../img/svg/next.svg") no-repeat center;
+  }
+
+  @include vp-1199 {
+    &--prev {
+      left: -5px;
+    }
+
+    &--next {
+      right: -5px;
+    }
+  }
+
+  @include vp-767 {
+    &::after {
+      width: 10px;
+      height: 19px;
+    }
+
+    &--prev {
+      left: -8px;
+    }
+
+    &--next {
+      right: -8px;
+    }
+
+    &--prev::after {
+      background-image: url("../../img/svg/prev--mobile.svg");
+    }
+
+    &--next::after {
+      background-image: url("../../img/svg/next--mobile.svg");
+    }
+  }
+}

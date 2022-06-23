@@ -3,6 +3,7 @@ import {initModals} from './modules/modals/init-modals';
 import {initTabs} from './modules/tabs';
 import {initCoaches} from './modules/coaches';
 import {initScroll} from './modules/scroll';
+import {initReviews} from './modules/reviews';
 
 // ---------------------------------
 
@@ -23,6 +24,7 @@ window.addEventListener('DOMContentLoaded', () => {
     initTabs();
     initCoaches();
     initScroll();
+    initReviews();
   });
 });
 

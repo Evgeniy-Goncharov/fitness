@@ -9,6 +9,10 @@
   margin: 0;
   margin-bottom: 9px;
 
+  &--white {
+    color: $color-default-white;
+  }
+
   @include vp-1199 {
     font-size: 42px;
     line-height: 42px;

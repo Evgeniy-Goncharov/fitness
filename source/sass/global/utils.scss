@@ -47,6 +47,10 @@
   transition: none !important;
 }
 
+html {
+  min-height: 100vh;
+}
+
 body {
   position: relative;
   font-family: "Roboto Condensed", "Arial", sans-serif;
@@ -56,4 +60,9 @@ body {
   font-weight: normal;
   background-color: $color-default-white;
   color: $color-black-for-text;
+  padding-bottom: 103px;
+
+  @include vp-1199 {
+    padding-bottom: 114px;
+  }
 }
