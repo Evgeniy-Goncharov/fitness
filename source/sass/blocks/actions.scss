@@ -32,7 +32,7 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   background-color: $color-red;
-  color: white;
+  color: $color-default-white;
   text-align: left;
 
   >div {
@@ -86,7 +86,8 @@
       padding-bottom: 73px;
     }
 
-    h3, b {
+    h3,
+    b {
       text-align: center;
     }
 
@@ -99,7 +100,7 @@
     }
 
     img {
-      height: 299px;
+      height: auto;
     }
   }
 }
@@ -181,9 +182,7 @@
   bottom: 46px;
   transition: opacity $trans-default;
 
-  @media (hover: hover),
-  screen and (min-width: 0\0) {
-
+  @media (hover: hover), screen and (min-width: 0\0) {
     &:hover,
     &:focus {
       opacity: 0.8;

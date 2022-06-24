@@ -28,9 +28,7 @@
   color: $color-default-white;
   display: block;
 
-  @media (hover: hover),
-  screen and (min-width: 0\0) {
-
+  @media (hover: hover), screen and (min-width: 0\0) {
     &:hover,
     &:focus {
       text-decoration: underline;
@@ -40,7 +38,6 @@
   @include vp-1199 {
     font-size: 24px;
     line-height: 24px;
-    letter-spacing: 0.01em;
   }
 
   @include vp-767 {

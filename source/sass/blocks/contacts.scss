@@ -1,7 +1,3 @@
-.contacts {
-
-}
-
 .contacts__grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -46,6 +42,15 @@
     margin-bottom: 0;
   }
 
+  a {
+    @media (hover: hover), screen and (min-width: 0\0) {
+      &:hover,
+      &:focus {
+        text-decoration: underline;
+      }
+    }
+  }
+
   @include vp-1199 {
     padding-top: 23px;
     padding-left: 0;
@@ -64,9 +69,14 @@
 
   @include vp-767 {
     display: block;
+    padding-top: 27px;
 
     &::before {
       display: none;
+    }
+
+    dl {
+      margin-bottom: 22px;
     }
   }
 }

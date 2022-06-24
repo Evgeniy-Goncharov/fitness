@@ -26,7 +26,7 @@
 }
 
 .games__left-column {
-  background-color: red;
+  background-color: $color-red;
   width: 500px;
   min-width: 500px;
   min-height: 500px;
@@ -129,6 +129,12 @@
   @include vp-1199 {
     img {
       height: 292px;
+    }
+  }
+
+  @include vp-767 {
+    img {
+      height: auto;
     }
   }
 }

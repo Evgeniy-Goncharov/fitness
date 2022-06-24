@@ -46,11 +46,13 @@
 .gym img {
   width: 660px;
   height: 401px;
+  min-width: 660px;
 
   @include vp-1199 {
     width: 100%;
-    height: 345px;
+    height: auto;
     margin: 17px 0;
+    min-width: auto;
     object-fit: cover;
   }
 
@@ -61,6 +63,7 @@
 }
 
 .gym__video {
+  border: none;
   position: absolute;
   bottom: 120px;
   left: 78px;

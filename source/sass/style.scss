@@ -4,7 +4,6 @@
 @import "vendor/normalize";
 @import "vendor/swiper";
 // Swiper 7.4.1
-// @import "vendor/swiper";
 
 // Global
 // ---------------------------------
@@ -19,13 +18,13 @@
 // Blocks
 // ---------------------------------
 
-@import "elements/logo.scss";
+// @import "elements/logo.scss";
 @import "elements/page-heading.scss";
 @import "elements/button.scss";
 @import "elements/section.scss";
 @import "elements/section-heading.scss";
 @import "blocks/page-header.scss";
-@import "blocks/intro.scss";
+// @import "blocks/intro.scss";
 @import "blocks/gym.scss";
 @import "blocks/abonements.scss";
 @import "blocks/games.scss";
@@ -44,12 +43,6 @@
 
 // ❗ обязательно используйте @media для отключения ховеров на тач устройствах
 // но не используем для текстовых полей ( input, textarea )
-/* @media (hover: hover), screen and (min-width: 0\0) {
-  &:hover,
-  &:focus {
-    color: $color-default-white;
-  }
-} */
 
 // адаптив пишем внутри каждого класса (смотрим container.scss)
 

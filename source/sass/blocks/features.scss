@@ -86,7 +86,6 @@
     margin: 0 auto;
     grid-area: c;
     padding: 19px 25px 38px;
-    grid-area: c;
 
     h3 {
       margin-bottom: 16px;
@@ -160,8 +159,8 @@
     display: block;
     background: $gradient-for-text;
     background-clip: text;
-    -webkit-text-fill-color: transparent;
     text-fill-color: transparent;
+    -webkit-text-fill-color: transparent;
   }
 
   small {

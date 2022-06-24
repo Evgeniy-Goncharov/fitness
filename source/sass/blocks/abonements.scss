@@ -27,13 +27,15 @@
     line-height: 150%;
     color: rgba(16, 38, 84, 0.5);
     width: auto;
+    cursor: pointer;
+    margin-right: 20px;
   }
 
   li.is-active {
     color: $color-black-for-text;
     position: relative;
 
-    &:before {
+    &::before {
       content: "";
       position: absolute;
       height: 2px;
@@ -43,6 +45,10 @@
       background-color: $color-orange;
       z-index: 10;
     }
+  }
+
+  li:last-child {
+    margin-right: 0;
   }
 
   @include vp-1199 {
@@ -105,6 +111,12 @@
 }
 
 .abonements__item {
+  &.swiper-slide-active {
+    .abonements__card-button {
+      display: inline-flex;
+    }
+  }
+
   >ul {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -123,7 +135,8 @@
   position: relative;
   padding: 7px;
 
-  &:hover {
+  &:hover,
+  &:focus {
     background: $gradient-for-card;
 
     .abonements__card-button {
@@ -219,6 +232,21 @@
     svg {
       width: 24px;
       height: 33px;
+    }
+  }
+}
+
+.abonements__card-button {
+  display: none;
+  transition: transform $trans-default;
+
+  @media (hover: hover), screen and (min-width: 0\0) {
+    &:hover,
+    &:focus {
+      border: none;
+      background: $gradient-for-card;
+      color: $color-default-white;
+      transform: scale(1.1);
     }
   }
 }
