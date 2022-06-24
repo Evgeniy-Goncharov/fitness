@@ -2142,7 +2142,7 @@ body {
 }
 
 .coaches__navigation--prev::after {
-  background: url("../../img/svg/prev.svg") no-repeat center;
+  background: url("../img/svg/prev.svg") no-repeat center;
 }
 
 .coaches__navigation--next {
@@ -2150,7 +2150,7 @@ body {
 }
 
 .coaches__navigation--next::after {
-  background: url("../../img/svg/next.svg") no-repeat center;
+  background: url("../img/svg/next.svg") no-repeat center;
 }
 
 .features {
@@ -2471,11 +2471,11 @@ body {
 }
 
 .reviews__navigation--prev::after {
-  background: url("../../img/svg/prev.svg") no-repeat center;
+  background: url("../img/svg/prev.svg") no-repeat center;
 }
 
 .reviews__navigation--next::after {
-  background: url("../../img/svg/next.svg") no-repeat center;
+  background: url("../img/svg/next.svg") no-repeat center;
 }
 
 .page-bottom {
@@ -3373,7 +3373,7 @@ body {
   }
 
   .coaches__navigation--prev::after {
-    background-image: url("../../img/svg/prev--mobile.svg");
+    background-image: url("../img/svg/prev--mobile.svg");
   }
 
   .coaches__navigation--next {
@@ -3381,7 +3381,7 @@ body {
   }
 
   .coaches__navigation--next::after {
-    background-image: url("../../img/svg/next--mobile.svg");
+    background-image: url("../img/svg/next--mobile.svg");
   }
 
   .features {
@@ -3557,11 +3557,11 @@ body {
   }
 
   .reviews__navigation--prev::after {
-    background-image: url("../../img/svg/prev--mobile.svg");
+    background-image: url("../img/svg/prev--mobile.svg");
   }
 
   .reviews__navigation--next::after {
-    background-image: url("../../img/svg/next--mobile.svg");
+    background-image: url("../img/svg/next--mobile.svg");
   }
 
   .page-bottom__left-column > * {
