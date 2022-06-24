@@ -1,6 +1,6 @@
 .intro {
   min-height: 658px;
-  background: $color-red url("../../img/bg/intro-bg.jpg") no-repeat center;
+  background: $color-red url("../img/bg/intro-bg.jpg") no-repeat center;
   background-size: cover;
   color: $color-default-white;
   padding-top: 51px;
@@ -11,26 +11,26 @@
     padding-top: 82px;
     box-shadow: none;
     min-height: 554px;
-    background-image: url("../../img/bg/intro-bg--tablet@2x.jpg");
+    background-image: url("../img/bg/intro-bg--tablet@2x.jpg");
   }
 
   @include vp-767 {
     padding-top: 78px;
     min-height: 490px;
-    background-image: url("../../img/bg/intro-bg--mobile@2x.jpg");
+    background-image: url("../img/bg/intro-bg--mobile@2x.jpg");
   }
 
   @include retina {
     @include desk {
-      background-image: url("../../img/bg/intro-bg@2x.jpg");
+      background-image: url("../img/bg/intro-bg@2x.jpg");
     }
 
     @include vp-1199 {
-      background-image: url("../../img/bg/intro-bg--tablet@2x.jpg");
+      background-image: url("../img/bg/intro-bg--tablet@2x.jpg");
     }
 
     @include vp-767 {
-      background-image: url("../../img/bg/intro-bg--mobile@2x.jpg");
+      background-image: url("../img/bg/intro-bg--mobile@2x.jpg");
     }
   }
 }
