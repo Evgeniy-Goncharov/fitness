@@ -1529,6 +1529,10 @@ button,
   transition: none !important;
 }
 
+.mobile-only {
+  display: none;
+}
+
 html {
   min-height: 100vh;
 }
@@ -1542,7 +1546,7 @@ body {
   font-weight: normal;
   background-color: #ffffff;
   color: #102654;
-  padding-bottom: 103px;
+  padding-bottom: 108px;
 }
 
 .container {
@@ -2395,7 +2399,7 @@ body {
 .reviews {
   text-align: center;
   padding-top: 58px;
-  padding-bottom: 77px;
+  padding-bottom: 78px;
 }
 
 .reviews__slider-wrapper {
@@ -2496,7 +2500,7 @@ body {
 }
 
 .page-bottom__right-column > * {
-  padding: 69px 95px 69px 120px;
+  padding: 69px 95px 65px 120px;
 }
 
 .train__form {
@@ -2643,6 +2647,15 @@ body {
   -webkit-box-align: start;
   -ms-flex-align: start;
   align-items: flex-start;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 14px;
+  line-height: 16px;
+  padding-top: 13px;
+}
+
+.page-footer__links ul {
   margin: 0;
   padding: 0;
   list-style: none;
@@ -2652,9 +2665,6 @@ body {
   display: flex;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  font-size: 14px;
-  line-height: 16px;
-  padding-top: 13px;
 }
 
 .page-footer__links li {
@@ -2663,12 +2673,6 @@ body {
 
 .page-footer__links a {
   color: #ffffff;
-}
-
-.page-footer__links--mobile {
-  display: none;
-  -ms-grid-columns: 1fr 1fr;
-  grid-template-columns: 1fr 1fr;
 }
 
 .page-footer__social {
@@ -3176,6 +3180,10 @@ body {
 }
 
 @media (max-width: 767px) {
+  .mobile-only {
+    display: block;
+  }
+
   body {
     padding-bottom: 260px;
   }
@@ -3602,7 +3610,7 @@ body {
 
   .page-footer {
     padding-bottom: 50px;
-    padding-top: 48px;
+    padding-top: 27px;
   }
 
   .page-footer__grid {
@@ -3618,24 +3626,29 @@ body {
   }
 
   .page-footer__links {
-    display: none;
+    margin-bottom: 36px;
+    font-size: 16px;
+    line-height: 19px;
+  }
+
+  .page-footer__links ul {
+    display: block;
+    -webkit-box-flex: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+    margin-right: 25px;
+  }
+
+  .page-footer__links ul:last-child {
+    margin-right: 0;
   }
 
   .page-footer__links li {
-    margin: 0;
+    margin: 21px 0;
   }
 
-  .page-footer__links--mobile {
-    display: -ms-grid;
-    display: grid;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 19px;
-    margin-bottom: 36px;
-    -webkit-column-gap: 30px;
-    -moz-column-gap: 30px;
-    column-gap: 30px;
-    row-gap: 21px;
+  .page-footer__links li:last-child {
+    margin-bottom: 0;
   }
 
   .page-footer__social {
