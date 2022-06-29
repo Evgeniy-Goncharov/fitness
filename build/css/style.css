@@ -1751,7 +1751,7 @@ body {
 .gym__video {
   border: none;
   position: absolute;
-  bottom: 120px;
+  top: 408px;
   left: 78px;
   right: 0;
   margin: 0 auto;
@@ -2019,7 +2019,7 @@ body {
 
 .games__right-column img {
   width: 100%;
-  height: 500px;
+  height: 100%;
   -o-object-fit: cover;
   object-fit: cover;
 }
@@ -2122,6 +2122,11 @@ body {
   margin: 0;
 }
 
+.coaches__item:hover figcaption,
+.coaches__item:focus figcaption {
+  display: none;
+}
+
 .coaches__item:hover div,
 .coaches__item:focus div {
   display: block;
@@ -2176,13 +2181,11 @@ body {
 }
 
 .features__center {
-  margin-top: 10px;
+  margin-top: 12px;
+  margin-bottom: 81px;
   background-color: #1c3374;
   color: #ffffff;
   padding: 40px 25px 49px;
-  height: -webkit-min-content;
-  height: -moz-min-content;
-  height: min-content;
   -ms-grid-column: 2;
   grid-column-start: 2;
   -ms-grid-column-span: 1;
@@ -2191,6 +2194,8 @@ body {
   grid-row-start: 1;
   -ms-grid-row-span: 2;
   grid-row-end: 3;
+  -ms-grid-row-align: stretch;
+  align-self: stretch;
 }
 
 .features__center h3 {
@@ -2428,9 +2433,15 @@ body {
   -ms-flex-align: start;
   align-items: flex-start;
   background-color: #1c3374;
-  padding: 44px 62px 46px;
+  padding: 44px 62px 30px;
   color: #ffffff;
   text-align: left;
+  height: 242px;
+}
+
+.reviews__item div {
+  overflow: auto;
+  height: 100%;
 }
 
 .reviews__item h3 {
@@ -2561,6 +2572,10 @@ body {
   -ms-grid-column-span: -2;
   grid-column-end: -1;
   margin: 0;
+}
+
+.contacts {
+  max-width: 683px;
 }
 
 .contacts__grid {
@@ -2832,10 +2847,11 @@ body {
   }
 
   .gym__video {
-    bottom: 100px;
+    bottom: 99px;
     width: 266px;
     height: 167px;
     left: 0;
+    top: auto;
   }
 
   .gym__content p:not(:first-child) {
@@ -3132,6 +3148,10 @@ body {
     column-gap: 60px;
   }
 
+  .contacts {
+    max-width: none;
+  }
+
   .contacts__grid {
     padding-top: 23px;
     padding-left: 0;
@@ -3262,7 +3282,7 @@ body {
   .gym__video {
     position: static;
     width: 100%;
-    height: 167px;
+    height: calc(100vw / 1.9);
     margin: 25px 0;
   }
 
@@ -3396,6 +3416,10 @@ body {
     padding-bottom: 57px;
   }
 
+  .features__wrapper {
+    padding: 0;
+  }
+
   .features__grid {
     display: block;
     padding-top: 36px;
@@ -3424,6 +3448,8 @@ body {
     display: block;
     text-align: center;
     margin-bottom: 32px;
+    padding-left: 15px;
+    padding-right: 15px;
   }
 
   .features__card:last-child {
@@ -3518,6 +3544,7 @@ body {
   .reviews__item {
     display: block;
     padding: 40px 25px 23px;
+    height: 335px;
   }
 
   .reviews__item h3 {
@@ -3530,7 +3557,7 @@ body {
   }
 
   .reviews__item-header {
-    margin: 0 0 15px;
+    margin: 0 0 12px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;

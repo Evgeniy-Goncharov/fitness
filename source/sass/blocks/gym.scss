@@ -65,7 +65,7 @@
 .gym__video {
   border: none;
   position: absolute;
-  bottom: 120px;
+  top: 408px;
   left: 78px;
   right: 0;
   margin: 0 auto;
@@ -76,16 +76,17 @@
   }
 
   @include vp-1199 {
-    bottom: 100px;
+    bottom: 99px;
     width: 266px;
     height: 167px;
     left: 0;
+    top: auto;
   }
 
   @include vp-767 {
     position: static;
     width: 100%;
-    height: 167px;
+    height: calc(100vw / 1.9);
     margin: 25px 0;
   }
 }

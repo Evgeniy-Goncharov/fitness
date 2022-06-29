@@ -121,6 +121,10 @@
 
   &:hover,
   &:focus {
+    figcaption {
+      display: none;
+    }
+
     div {
       display: block;
     }

@@ -393,6 +393,9 @@
               width: 100px;
               height: 100px;
               transition: transform 0.2s ease-out;
+              display: inline-flex;
+              justify-content: center;
+              align-items: center;
             }
 
             a:hover,
@@ -666,7 +669,7 @@
       <div class="coaches__slider-wrapper">
         <div class="coaches__slider swiper" data-slider="coaches">
           <ul class="coaches__list swiper-wrapper">
-            <li class="coaches__item swiper-slide">
+            <li class="coaches__item swiper-slide" tabindex="0" data-slide="0">
               <figure>
                 <picture>
                   <!-- 1x: 260px x 294px, 2x: 520px x 588px -->
@@ -688,7 +691,7 @@
               </div>
             </li>
 
-            <li class="coaches__item swiper-slide">
+            <li class="coaches__item swiper-slide" tabindex="0" data-slide="1">
               <figure>
                 <picture>
                   <!-- 1x: 260px x 294px, 2x: 520px x 588px -->
@@ -710,7 +713,7 @@
               </div>
             </li>
 
-            <li class="coaches__item swiper-slide">
+            <li class="coaches__item swiper-slide" tabindex="0" data-slide="2">
               <figure>
                 <picture>
                   <!-- 1x: 260px x 294px, 2x: 520px x 588px -->
@@ -732,7 +735,7 @@
               </div>
             </li>
 
-            <li class="coaches__item swiper-slide">
+            <li class="coaches__item swiper-slide" tabindex="0" data-slide="3">
               <figure>
                 <picture>
                   <!-- 1x: 260px x 294px, 2x: 520px x 588px -->
@@ -754,7 +757,7 @@
               </div>
             </li>
 
-            <li class="coaches__item swiper-slide">
+            <li class="coaches__item swiper-slide" tabindex="0" data-slide="4">
               <figure>
                 <picture>
                   <!-- 1x: 260px x 294px, 2x: 520px x 588px -->
@@ -776,7 +779,7 @@
               </div>
             </li>
 
-            <li class="coaches__item swiper-slide">
+            <li class="coaches__item swiper-slide" tabindex="0" data-slide="5">
               <figure>
                 <picture>
                   <!-- 1x: 260px x 294px, 2x: 520px x 588px -->
@@ -798,7 +801,7 @@
               </div>
             </li>
 
-            <li class="coaches__item swiper-slide">
+            <li class="coaches__item swiper-slide" tabindex="0" data-slide="6">
               <figure>
                 <picture>
                   <!-- 1x: 260px x 294px, 2x: 520px x 588px -->
@@ -820,7 +823,7 @@
               </div>
             </li>
 
-            <li class="coaches__item swiper-slide">
+            <li class="coaches__item swiper-slide" tabindex="0" data-slide="7">
               <figure>
                 <picture>
                   <!-- 1x: 260px x 294px, 2x: 520px x 588px -->
@@ -850,7 +853,7 @@
     </section>
 
     <section class="features section">
-      <div class="container">
+      <div class="features__wrapper container">
         <h2 class="section-heading">Наши преимущества</h2>
         <div class="features__grid">
           <div class="features__card features__card--1 features__card--border-bottom features__card--padding-left">
@@ -1013,7 +1016,7 @@
 
             <label>
               <span class="visually-hidden">Ваш телефон</span>
-              <input type="tel" name="phone" placeholder="Телефон" pattern="^[ 0-9]+$" required minlength="9">
+              <input type="tel" name="phone" placeholder="Телефон" pattern="\+?[0-9\s\-\(\)]+" required minlength="9">
             </label>
 
             <button class="train__submit-button button button--h-52" type="submit">Отправить</button>

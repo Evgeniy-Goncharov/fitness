@@ -3,6 +3,7 @@ let reviewsSlider = document.querySelector('[data-slider=reviews]');
 let abonementsSlider = document.querySelector('[data-slider=abonements]');
 let abonementsThumbs = document.querySelector('[data-slider=abonements-thumbs]');
 
+
 function initSliders() {
   if (abonementsSlider && abonementsThumbs) {
     const thumbs = abonementsThumbs.querySelectorAll('[data-slide]');
@@ -55,13 +56,21 @@ function initSliders() {
       breakpoints: {
         768: {
           slidesPerView: 2,
-          slidesPerGroup: 2,
           spaceBetween: 30,
         },
         1200: {
           slidesPerView: 4,
           spaceBetween: 40,
-          slidesPerGroup: 4,
+        },
+      },
+
+      on: {
+        init: () => {
+          const dublicates = coachesSlider.querySelectorAll('.swiper-slide-duplicate');
+
+          for (let item of dublicates) {
+            item.removeAttribute('tabindex');
+          }
         },
       },
     });
