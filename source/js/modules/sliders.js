@@ -46,6 +46,8 @@ function initSliders() {
   }
 
   if (coachesSlider) {
+    const coachesItems = coachesSlider.querySelectorAll('.coaches__item');
+
     coachesSlider = new window.Swiper(coachesSlider, {
       loop: true,
       navigation: {
@@ -74,6 +76,13 @@ function initSliders() {
         },
       },
     });
+
+    for (let item of coachesItems) {
+      item.addEventListener('focus', (evt) => {
+        evt.stopPropagation();
+        coachesSlider.slideTo(evt.target.dataset.slide);
+      });
+    }
   }
 
   if (reviewsSlider) {
