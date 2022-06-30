@@ -1546,7 +1546,19 @@ body {
   font-weight: normal;
   background-color: #ffffff;
   color: #102654;
-  padding-bottom: 108px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+main {
+  -webkit-box-flex: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
 }
 
 .container {
@@ -2436,12 +2448,8 @@ body {
   padding: 44px 62px 30px;
   color: #ffffff;
   text-align: left;
-  height: 242px;
-}
-
-.reviews__item div {
-  overflow: auto;
-  height: 100%;
+  min-height: 242px;
+  height: auto;
 }
 
 .reviews__item h3 {
@@ -2469,6 +2477,10 @@ body {
 
 .reviews__item-header h3 {
   display: none;
+}
+
+.reviews__navigation {
+  top: 165px;
 }
 
 .reviews__navigation::after {
@@ -2506,12 +2518,12 @@ body {
 
 .page-bottom__left-column > * {
   max-width: 620px;
-  padding: 68px 170px 70px 40px;
+  padding: 68px 170px 69px 40px;
   margin-left: auto;
 }
 
 .page-bottom__right-column > * {
-  padding: 69px 95px 65px 120px;
+  padding: 69px 95px 64px 120px;
 }
 
 .train__form {
@@ -2626,10 +2638,6 @@ body {
 }
 
 .page-footer {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
   min-height: 108px;
   background-color: #030a1a;
   padding-top: 25px;
@@ -2770,10 +2778,6 @@ body {
 }
 
 @media (max-width: 1199px) {
-  body {
-    padding-bottom: 114px;
-  }
-
   .page-heading {
     font-size: 86px;
     line-height: 86px;
@@ -3119,6 +3123,10 @@ body {
     padding: 44px 65px 46px;
   }
 
+  .reviews__navigation {
+    top: 153px;
+  }
+
   .reviews__navigation--prev {
     left: -5px;
   }
@@ -3202,10 +3210,6 @@ body {
 @media (max-width: 767px) {
   .mobile-only {
     display: block;
-  }
-
-  body {
-    padding-bottom: 260px;
   }
 
   .container {
@@ -3534,7 +3538,7 @@ body {
 
   .reviews {
     padding-top: 34px;
-    padding-bottom: 34px;
+    padding-bottom: 32px;
   }
 
   .reviews__slider-wrapper {
@@ -3576,6 +3580,10 @@ body {
     display: block;
     font-size: 20px;
     line-height: 130%;
+  }
+
+  .reviews__navigation {
+    top: 202px;
   }
 
   .reviews__navigation::after {

@@ -46,10 +46,11 @@ function initSliders() {
   }
 
   if (coachesSlider) {
-    const coachesItems = coachesSlider.querySelectorAll('.coaches__item');
+    let coachesItems;
 
     coachesSlider = new window.Swiper(coachesSlider, {
       loop: true,
+
       navigation: {
         nextEl: '.coaches__navigation--next',
         prevEl: '.coaches__navigation--prev',
@@ -67,22 +68,24 @@ function initSliders() {
       },
 
       on: {
-        init: () => {
-          const dublicates = coachesSlider.querySelectorAll('.swiper-slide-duplicate');
+        afterInit: () => {
+          coachesItems = document.querySelectorAll('.coaches__item');
 
-          for (let item of dublicates) {
-            item.removeAttribute('tabindex');
+          for (let item of coachesItems) {
+            if (item.classList.contains('swiper-slide-duplicate')) {
+              item.removeAttribute('tabindex');
+            } else {
+              item.setAttribute('tabindex', '0');
+              // item.addEventListener('focus', () => {
+              //   if (!item.classList.contains('swiper-slide-active')) {
+              //     coachesSlider.slideTo(item.dataset.swiperSlideIndex);
+              //   }
+              // });
+            }
           }
         },
       },
     });
-
-    for (let item of coachesItems) {
-      item.addEventListener('focus', (evt) => {
-        evt.stopPropagation();
-        coachesSlider.slideTo(evt.target.dataset.slide);
-      });
-    }
   }
 
   if (reviewsSlider) {
