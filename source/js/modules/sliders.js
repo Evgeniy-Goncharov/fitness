@@ -1,14 +1,18 @@
-let coachesSlider = document.querySelector('[data-slider=coaches]');
+import Swiper from '../vendor/swiper';
+
+const coachesSliderElement = document.querySelector('[data-slider=coaches]');
 let reviewsSlider = document.querySelector('[data-slider=reviews]');
 let abonementsSlider = document.querySelector('[data-slider=abonements]');
 let abonementsThumbs = document.querySelector('[data-slider=abonements-thumbs]');
 
 
 function initSliders() {
+  let coachesSlider;
+
   if (abonementsSlider && abonementsThumbs) {
     const thumbs = abonementsThumbs.querySelectorAll('[data-slide]');
 
-    abonementsThumbs = new window.Swiper(abonementsThumbs, {
+    abonementsThumbs = new Swiper(abonementsThumbs, {
       spaceBetween: 31,
       slidesPerView: 'auto',
       freeMode: true,
@@ -23,7 +27,7 @@ function initSliders() {
       },
     });
 
-    abonementsSlider = new window.Swiper(abonementsSlider, {
+    abonementsSlider = new Swiper(abonementsSlider, {
       spaceBetween: 10,
       allowTouchMove: false,
       thumbs: {
@@ -45,10 +49,8 @@ function initSliders() {
     }
   }
 
-  if (coachesSlider) {
-    let coachesItems;
-
-    coachesSlider = new window.Swiper(coachesSlider, {
+  if (coachesSliderElement) {
+    coachesSlider = new Swiper(coachesSliderElement, {
       loop: true,
 
       navigation: {
@@ -69,18 +71,13 @@ function initSliders() {
 
       on: {
         afterInit: () => {
-          coachesItems = document.querySelectorAll('.coaches__item');
+          const coachesItems = coachesSliderElement.querySelectorAll('.coaches__item');
 
           for (let item of coachesItems) {
             if (item.classList.contains('swiper-slide-duplicate')) {
               item.removeAttribute('tabindex');
             } else {
               item.setAttribute('tabindex', '0');
-              // item.addEventListener('focus', () => {
-              //   if (!item.classList.contains('swiper-slide-active')) {
-              //     coachesSlider.slideTo(item.dataset.swiperSlideIndex);
-              //   }
-              // });
             }
           }
         },
@@ -89,7 +86,7 @@ function initSliders() {
   }
 
   if (reviewsSlider) {
-    reviewsSlider = new window.Swiper(reviewsSlider, {
+    reviewsSlider = new Swiper(reviewsSlider, {
       slidesPerView: 1,
       spaceBetween: 60,
       navigation: {
@@ -98,6 +95,8 @@ function initSliders() {
       },
     });
   }
+
+  return coachesSlider;
 }
 
-export {coachesSlider, reviewsSlider, abonementsSlider, abonementsThumbs, initSliders};
+export {reviewsSlider, abonementsSlider, abonementsThumbs, initSliders};
